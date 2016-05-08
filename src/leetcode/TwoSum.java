@@ -2,6 +2,16 @@ package leetcode;
 
 import java.util.HashMap;
 
+//Given an array of integers, return indices of the two numbers such that they add up to a specific target.
+//
+//        You may assume that each input would have exactly one solution.
+//
+//        Example:
+//        Given nums = [2, 7, 11, 15], target = 9,
+//
+//        Because nums[0] + nums[1] = 2 + 7 = 9,
+//        return [0, 1].
+
 //http://www.mamicode.com/info-detail-513290.html
 // 因为Hashmap仅提供通过key获得value,故
 // HashMap value放置与numers[index]匹配的数值,key放置index；，故
