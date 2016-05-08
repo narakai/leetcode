@@ -39,8 +39,8 @@ public class AddTwoNumbers {
             }
 
             //求余 11 % 10 = 1
-            //p3 = p3.next 每次重置,但是newHead每次都会加next
             p3.next = new ListNode(carry % 10);
+            //p3 = p3.next 每次重置,但是newHead每次都会加next
             p3 = p3.next;
             //整除 11 / 10 = 1, 加到下一位
             carry /= 10;
