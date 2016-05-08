@@ -39,6 +39,7 @@ public class AddTwoNumbers {
             }
 
             //求余 11 % 10 = 1
+            //p3 = p3.next 每次重置,但是newHead每次都会加next
             p3.next = new ListNode(carry % 10);
             p3 = p3.next;
             //整除 11 / 10 = 1, 加到下一位
@@ -50,5 +51,19 @@ public class AddTwoNumbers {
             p3.next = new ListNode(1);
 
         return newHead.next;
+    }
+
+    public static void main(String[] args) {
+        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        ListNode l1 = new ListNode(3);
+        ListNode ll1 = new ListNode(4);
+        l1.next = ll1;
+        ll1.next = new ListNode(2);
+        ListNode l2 = new ListNode(4);
+        ListNode ll2 = new ListNode(6);
+        l2.next = ll2;
+        ll2.next = new ListNode(5);
+        ListNode l3 = addTwoNumbers.addTwoNumbers(l1, l2);
+        System.out.println(l3.val + " " + l3.next.val + " " + l3.next.next.val);
     }
 }
